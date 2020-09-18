@@ -1,0 +1,4 @@
+name = "SimplePlanarGraphs"
+uuid = "4800dc9b-61c6-46c3-b3ee-487f8393015d"
+authors = ["Ed Scheinerman <ers@jhu.edu>"]
+version = "0.1.0"
