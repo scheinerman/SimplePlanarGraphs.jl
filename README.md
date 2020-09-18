@@ -1,5 +1,9 @@
 # `SimplePlanarGraphs`
 
+
+[![Build Status](https://travis-ci.org/scheinerman/SimplePlanarGraphs.jl.svg?branch=master)](https://travis-ci.org/scheinerman/SimplePlanarGraphs.jl)
+
+
 Experimental (for now) place to try out planarity algorithms 
 in support of `SimpleGraphs`. 
 
