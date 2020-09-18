@@ -2,7 +2,7 @@
 module SimplePlanarGraphs
 using SimpleGraphs, LinearAlgebra
 
-export count_cross, _cross, _orientation
+export count_cross
 
 function _orientation(a, b, c)
     A = ones(3, 3)
@@ -13,16 +13,20 @@ function _orientation(a, b, c)
 end
 
 function _cross(a, b, c, d)::Bool
-    if _orientation(a, b, c) == _orientation(a, b, d)
+    if _orientation(a, b, c) * _orientation(a, b, d) >= 0
         return false
     end
-    if _orientation(c, d, a) == _orientation(c, d, b)
+    if _orientation(c, d, a) * _orientation(c, d, b) >= 0
         return false
     end
     return true
 end
 
-function count_cross(G::SimpleGraph)
+"""
+`count_cross(G::SimpleGraph)` returns the number of edge crossings
+in the `xy`-embedding of this graph. 
+"""
+function count_cross(G::SimpleGraph)::Int
     EE = elist(G)
     m = length(EE)
     count = 0
