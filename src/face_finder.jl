@@ -1,8 +1,15 @@
-# this code is designed to explore a graph to attempt to find attempt a face
 
-using SimpleGraphs  # remove later
-# export face_finder
+export face_finder
 
+"""
+`face_finder(G::SimpleGraph)` will attempt to find a face of the graph. 
+Presently, it is *extremely* limited in what it can do.
+
+*If* the graph `G` is planar and 3-connected, and *if* a face is 
+returned, it probably is an actual face in some planar embedding of `G`.
+
+See the `README` for this module for more detail.
+"""
 function face_finder(G::SimpleGraph{T}) where T 
     if is_acyclic(G)
         return T[]
