@@ -9,6 +9,15 @@ in support of `SimpleGraphs`.
 
 **Caveat Emptor**: This code is not ready for prime time!
 
+## Generating Planar Graphs
+
+The function `random_triangulation(n::Int)` creates an `n`-vertex planar graph in 
+which all faces, except perhaps the outside face, are triangles. 
+
+It uses the `triangulations(pts)` function where `pts` is an `n`-by-`2` array
+of numbers. This builds the Delauney triangulation graph on those points.
+
+
 ## Counting Crossings
 
 The function `count_cross(G)` counts the number of crossings in the `xy`-embedding 
