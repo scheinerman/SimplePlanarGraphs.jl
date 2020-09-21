@@ -1,18 +1,24 @@
 using Triangle
-export triangulation, random_triangulation
+export Triangulation, RandomTriangulation
 """
-`random_triangulation(n)` creates a random `n`-vertex planar graph 
+`RandomTriangulation(n)` creates a random `n`-vertex planar graph 
 all of whose bounded faces are triangles. 
 """
-function random_triangulation(n::Int)::SimpleGraph{Int}
+function RandomTriangulation(n::Int)::SimpleGraph{Int}
     pts = rand(n,2)
-    G = triangulation(pts)
+    G = Triangulation(pts)
     embed_rot(G)
     embed(G,:tutte)
     return G
 end 
 
-function triangulation(pts::Array{Float64,2})::SimpleGraph 
+
+"""
+`Triangle(point_list)` creates a graph that is the Delauney triangulation
+of the `n`-by-`2` matrix `point_list` whose rows give the coordinates 
+of the points. 
+"""
+function Triangulation(pts::Array{Float64,2})::SimpleGraph 
     n,c = size(pts)
     G = IntGraph(n)
     idx = collect(1:n)
