@@ -9,6 +9,7 @@ function RandomTriangulation(n::Int)::SimpleGraph{Int}
     G = Triangulation(pts)
     embed_rot(G)
     embed(G,:tutte)
+    name(G,"Random Triangulation")
     return G
 end 
 
@@ -35,5 +36,6 @@ function Triangulation(pts::Array{Float64,2})::SimpleGraph
         add!(G,b,c)
     end 
     embed(G,xy)
+    name(G,"Triangulation")
     return G 
 end
