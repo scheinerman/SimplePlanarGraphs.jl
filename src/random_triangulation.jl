@@ -7,7 +7,6 @@ all of whose bounded faces are triangles.
 function RandomTriangulation(n::Int)::SimpleGraph{Int}
     pts = rand(n,2)
     G = Triangulation(pts)
-    embed_rot(G)
     embed(G,:tutte)
     name(G,"Random Triangulation")
     return G
@@ -36,6 +35,7 @@ function Triangulation(pts::Array{Float64,2})::SimpleGraph
         add!(G,b,c)
     end 
     embed(G,xy)
+    embed_rot(G)
     name(G,"Triangulation")
     return G 
 end
