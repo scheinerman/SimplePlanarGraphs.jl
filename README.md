@@ -1,4 +1,4 @@
-# `SimplePlanarGraphs`
+# SimplePlanarGraphs
 
 
 [![Build Status](https://travis-ci.org/scheinerman/SimplePlanarGraphs.jl.svg?branch=master)](https://travis-ci.org/scheinerman/SimplePlanarGraphs.jl)
