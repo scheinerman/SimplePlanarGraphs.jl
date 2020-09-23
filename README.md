@@ -8,7 +8,10 @@ Experimental (for now) place to try out planarity algorithms
 in support of `SimpleGraphs`. 
 
 **Caveat Emptor**: This code is not ready for prime time! This is not a registered module, so to install
-use `]dev https://github.com/scheinerman/SimplePlanarGraphs.jl.git`.
+use 
+```
+]dev https://github.com/scheinerman/SimplePlanarGraphs.jl.git
+```
 
 ## Generating Planar Graphs
 
