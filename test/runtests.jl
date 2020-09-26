@@ -4,7 +4,7 @@ G = Cube(3)
 embed(G,:combined)
 @test count_cross(G) == 2
 
-G = RandomTriangulation(10)
+G = RandomTriangulation(17)
 @test count_cross(G) == 0
 @test euler_char(G) == 2
 H = dual(G)
