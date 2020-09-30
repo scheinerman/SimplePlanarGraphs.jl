@@ -10,7 +10,7 @@ Triangle = "56f361f5-126b-55db-87fb-1c71988fcde4"
 
 [compat]
 julia = "1"
-SimpleGraphs = "0.5, 0.6"
+SimpleGraphs = "0.5, 0.6, 0.7"
 Triangle = "0.3"
 
 [extras]
