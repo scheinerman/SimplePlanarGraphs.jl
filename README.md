@@ -1,7 +1,6 @@
 # SimplePlanarGraphs
 
 
-[![Build Status](https://travis-ci.com/scheinerman/SimplePlanarGraphs.jl.svg?branch=master)](https://travis-ci.com/scheinerman/SimplePlanarGraphs.jl)
 
 
 Experimental (for now) place to try out planarity algorithms 
@@ -20,6 +19,13 @@ which all faces, except perhaps the outside face, are triangles.
 
 It uses the `Triangulation(pts)` function where `pts` is an `n`-by-`2` array
 of numbers. This builds the Delauney triangulation graph on those points.
+
+## Planarity Testing
+
+The function `is_planar` tests if a graph has a planar embedding. 
+
+The current implementation is based on Schnyder's theorem that connects planarity
+to poset dimension. It works, but isn't speedy.
 
 
 ## Counting Crossings

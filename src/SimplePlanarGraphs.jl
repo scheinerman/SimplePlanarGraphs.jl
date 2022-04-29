@@ -16,5 +16,6 @@ quick_planar_check(G::SimpleGraph)::Bool = NV(G)<5 || NE(G)<=3*NV(G)-6
 include("count_cross.jl")
 include("face_finder.jl")
 include("random_triangulation.jl")
-  
+include("poset_planarity.jl")
+
 end

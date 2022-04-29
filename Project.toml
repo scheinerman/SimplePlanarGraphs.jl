@@ -7,11 +7,15 @@ version = "0.1.0"
 SimpleGraphs = "55797a34-41de-5266-9ec1-32ac4eb504d3"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 Triangle = "56f361f5-126b-55db-87fb-1c71988fcde4"
+SimplePosets = "b2aef97b-4721-5af9-b440-0bad754dc5ba"
+SimplePosetAlgorithms = "0c1320c5-0940-5dc6-8c7d-d9650cdddf58"
 
 [compat]
 julia = "1"
 SimpleGraphs = "0.5, 0.6, 0.7"
 Triangle = "0.3"
+SimplePosets = "0.1"
+SimplePosetAlgorithms = "0.4"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
