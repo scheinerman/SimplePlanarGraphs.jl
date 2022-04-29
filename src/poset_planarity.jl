@@ -10,7 +10,7 @@ Return `true` if the graph is planar.
 **Note**: This is a simple implementation, but not efficient. It's a place holder
 until we have a better one. 
 """
-function is_planar(G::SimpleGraph)
+function is_planar(G::SimpleGraph)::Bool
     # Create a poset from G and see if it has dimension ≤ 3.
     P = SimplePoset(G)
     try
@@ -19,5 +19,6 @@ function is_planar(G::SimpleGraph)
     catch
         return false
     end
+    return false
 
 end
