@@ -12,6 +12,11 @@ until we have a better one.
 """
 function is_planar(G::SimpleGraph)::Bool
     # Create a poset from G and see if it has dimension ≤ 3.
+
+    if !quick_planar_check(G)
+        return false 
+    end
+
     P = SimplePoset(G)
     try
         R = realizer(P,3)
