@@ -13,16 +13,23 @@ until we have a better one.
 function is_planar(G::SimpleGraph)::Bool
     # Create a poset from G and see if it has dimension ≤ 3.
 
+    if cache_check(G, :is_planar)
+        return cache_recall(G, :is_planar)
+    end
+
     if !quick_planar_check(G)
         return false
     end
 
     try
         R = schnyder_realizer(G)
+        cache_save(G, :is_planar, true)
         return true
     catch
+        cache_save(G, :is_planar, false)
         return false
     end
+    cache_save(G, :is_planar, false)
     return false
 end
 
