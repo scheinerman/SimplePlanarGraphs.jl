@@ -17,6 +17,7 @@ function quick_planar_check(G::SimpleGraph)::Bool
     if n ≤ 4
         return true
     end
+
     g = girth(G)
     if g == 0
         return true

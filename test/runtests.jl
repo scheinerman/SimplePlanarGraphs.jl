@@ -11,3 +11,6 @@ H = dual(G)
 embed(H,:tutte)
 @test count_cross(H) == 0
 @test euler_char(H) == 2
+
+G = Grid(4,3)
+@test is_planar(G)

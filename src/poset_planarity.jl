@@ -21,6 +21,11 @@ function is_planar(G::SimpleGraph)::Bool
         return false
     end
 
+    if count_cross(G) == 0
+        cache_save(G, :is_planar, true)
+        return true 
+    end
+
     try
         R = schnyder_realizer(G)
         cache_save(G, :is_planar, true)
