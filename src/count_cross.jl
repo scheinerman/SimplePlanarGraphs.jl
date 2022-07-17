@@ -19,10 +19,10 @@ function _cross(a, b, c, d)::Bool
 end
 
 """
-`count_cross(G::SimpleGraph)` returns the number of edge crossings
+`count_cross(G::UG)` returns the number of edge crossings
 in the `xy`-embedding of this graph. 
 """
-function count_cross(G::SimpleGraph)::Int
+function count_cross(G::UG)::Int
     EE = elist(G)
     m = length(EE)
     count = 0

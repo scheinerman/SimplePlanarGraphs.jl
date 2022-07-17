@@ -12,7 +12,7 @@ SimplePosetAlgorithms = "0c1320c5-0940-5dc6-8c7d-d9650cdddf58"
 
 [compat]
 julia = "1"
-SimpleGraphs = "0.5, 0.6, 0.7"
+SimpleGraphs = "0.7, 0.8"
 Triangle = "0.3"
 SimplePosets = "0.1"
 SimplePosetAlgorithms = "0.4"

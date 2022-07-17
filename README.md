@@ -71,7 +71,7 @@ julia> G = relabel(dual(BuckyBall()))
 SimpleGraph{Int64} (n=32, m=90)
 
 julia> euler_char(G)
-[ Info: Giving this graph, SimpleGraph{Int64} (n=32, m=90), a default rotation system.
+[ Info: Giving this graph, UndirectedGraph{Int64} (n=32, m=90), a default rotation system.
 -54
 
 julia> F = face_finder(G)

@@ -4,13 +4,13 @@ using SimplePosets, SimplePosetAlgorithms
 export is_planar, schnyder_realizer
 
 """
-    is_planar(G::SimpleGraph)
+    is_planar(G::UG)
 Return `true` if the graph is planar.
 
 **Note**: This is a simple implementation, but not efficient. It's a place holder
 until we have a better one. 
 """
-function is_planar(G::SimpleGraph)::Bool
+function is_planar(G::UG)::Bool
     # Create a poset from G and see if it has dimension ≤ 3.
 
     if cache_check(G, :is_planar)
@@ -46,7 +46,7 @@ This is a reduced version of a three-dimensional realizer of `P(G)`.
 
 Throws an error if `G` is not planar.
 """
-function schnyder_realizer(G::SimpleGraph{T}) where {T}
+function schnyder_realizer(G::UG{T}) where {T}
     if cache_check(G, :schnyder_realizer)
         return cache_recall(G, :schnyder_realizer)
     end

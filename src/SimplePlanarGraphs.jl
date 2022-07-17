@@ -6,13 +6,13 @@ export quick_planar_check
 
 
 """
-`quick_planar_check(G::SimpleGraph)` performs very basic necessary checks for a 
+`quick_planar_check(G::UG)` performs very basic necessary checks for a 
 graph to be planar (or not). These checks include edge/girth bound and 5-degeneracy.
 
 If this function returns `false` the graph is definitely not planar. If it 
 returns `true` it might be planar, but it might not.
 """
-function quick_planar_check(G::SimpleGraph)::Bool
+function quick_planar_check(G::UG)::Bool
 
     if cache_check(G, :is_planar)
         return cache_recall(G, :is_planar)

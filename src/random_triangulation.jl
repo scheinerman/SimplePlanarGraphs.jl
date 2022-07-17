@@ -4,7 +4,7 @@ export Triangulation, RandomTriangulation
 `RandomTriangulation(n)` creates a random `n`-vertex planar graph 
 all of whose bounded faces are triangles. 
 """
-function RandomTriangulation(n::Int)::SimpleGraph{Int}
+function RandomTriangulation(n::Int)::UG{Int}
     pts = rand(n,2)
     G = Triangulation(pts)
     embed(G,:tutte)
@@ -18,7 +18,7 @@ end
 of the `n`-by-`2` matrix `point_list` whose rows give the coordinates 
 of the points. 
 """
-function Triangulation(pts::Array{Float64,2})::SimpleGraph 
+function Triangulation(pts::Array{Float64,2})::UG 
     n,c = size(pts)
     G = IntGraph(n)
     idx = collect(1:n)
