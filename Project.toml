@@ -14,8 +14,8 @@ SimplePosetAlgorithms = "0c1320c5-0940-5dc6-8c7d-d9650cdddf58"
 julia = "1"
 SimpleGraphs = "0.8"
 Triangle = "0.3"
-SimplePosets = "0.1"
-SimplePosetAlgorithms = "0.4"
+SimplePosets = "0.1, 0.2"
+SimplePosetAlgorithms = "0.4, 0.5, 0.6"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
